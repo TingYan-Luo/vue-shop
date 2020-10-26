@@ -2,6 +2,8 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Login from '../components/login.vue'
 import Home from '../components/home.vue'
+import Welcome from '../components/welcome.vue'
+import Users from '../components/users.vue'
 // 这里是路由入口文件
 Vue.use(VueRouter)
 
@@ -12,14 +14,25 @@ const routes = [
   },
   {
     path: '/home',
-    component: Home
+    redirect: '/welcome',
+    component: Home,
+    children: [
+      {
+        path: '/welcome',
+        component: Welcome
+      },
+      {
+        path: '/users',
+        component: Users
+      }
+    ]
   }
 ]
 
 const router = new VueRouter({
   routes
 })
-  // 为router对象，添加路由守卫
+// 为router对象，添加路由守卫
 router.beforeEach((to, from, next) => {
   // 如果用户访问的是登陆页面，则放行
   if (to.path === '/login') return next()

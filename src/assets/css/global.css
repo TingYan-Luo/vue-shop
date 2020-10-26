@@ -8,3 +8,18 @@ html,body,#app {
     padding: 0;
     box-sizing: border-box;
 }
+.box-card {
+    text-align: left;
+    line-height: 0;
+}
+.el-breadcrumb {
+    margin-bottom: 15px;
+    text-align: left;
+}
+.el-table {
+    margin-bottom: 15px;
+}
+
+.el-dialog {
+    line-height: 20px;
+}
