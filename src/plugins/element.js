@@ -6,6 +6,7 @@ import {
   FormItem,
   Input,
   Row,
+  Col,
   Message,
   Container,
   Aside,
@@ -24,7 +25,11 @@ import {
   Tooltip,
   Pagination,
   Dialog,
-  MessageBox
+  MessageBox,
+  Tag,
+  Tree,
+  Select,
+  Option
 } from 'element-ui'
 
 // 再将其全局注册到VUE中
@@ -33,6 +38,7 @@ Vue.use(FormItem)
 Vue.use(Form)
 Vue.use(Input)
 Vue.use(Row)
+Vue.use(Col)
 Vue.use(Container)
 Vue.use(Aside)
 Vue.use(Main)
@@ -50,5 +56,9 @@ Vue.use(Switch)
 Vue.use(Tooltip)
 Vue.use(Pagination)
 Vue.use(Dialog)
+Vue.use(Tag)
+Vue.use(Tree)
+Vue.use(Select)
+Vue.use(Option)
 Vue.prototype.$message = Message
 Vue.prototype.$confirm = MessageBox
