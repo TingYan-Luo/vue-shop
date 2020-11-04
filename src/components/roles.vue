@@ -1,11 +1,14 @@
 <template>
   <div>
+<!--    面包屑导航-->
     <el-breadcrumb separator="/">
       <el-breadcrumb-item :to="{ path: '/welcome' }">首页</el-breadcrumb-item>
       <el-breadcrumb-item>权限管理</el-breadcrumb-item>
       <el-breadcrumb-item>角色列表</el-breadcrumb-item>
     </el-breadcrumb>
+<!--    卡片视图区域-->
     <el-card class="box-card">
+<!--      添加角色按钮-->
       <el-button type="primary" @click="addRole">添加角色</el-button>
       <el-table :data="roleList" stripe border style="width: 100%">
         <el-table-column type="expand">
@@ -134,6 +137,7 @@
       this.getRoleList()
     },
     methods: {
+      // 获取所有权限数据列表
       async getRoleList() {
         var {data: res} = await this.$http.get('roles')
         // console.log(res)
@@ -182,12 +186,14 @@
         // 打开弹出框
         this.editVisible = true
       },
+      // 取消编辑角色
       editCancel() {
         // 重置表单
         this.$refs.editFormRef.resetFields()
         // 关闭弹出框
         this.editVisible = false
       },
+      // 确认编辑角色，提交确认
       async editConfirm() {
         console.log(this.editForm)
         // 提交之前进行预验证
@@ -237,8 +243,8 @@
       async setRight(role) {
         // 通过向后端发送请求，获取到所有权限列表，且是tree形式的
         var {data: res} = await this.$http.get('rights/tree')
-        // console.log(res)
-        this.setRightList = res.data
+        console.log(res)
+        // this.setRightList = res.data
         this.getRightArray(role, this.checkRightList)
         // 将当前用户的id存储到公共数据中
         this.setRoleId = role.id

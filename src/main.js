@@ -2,6 +2,8 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import './assets/css/global.css'
+// 引入table-tree插件
+import tableTree from 'vue-table-with-tree-grid'
 // 引入Element UI
 import './plugins/element.js'
 import 'element-ui/lib/theme-chalk/index.css'
@@ -15,6 +17,9 @@ axios.interceptors.request.use(config => {
 })
 Vue.prototype.$http = axios
 Vue.prototype.$http.defaults.baseURL = 'http://127.0.0.1:8888/api/private/v1/'
+// 挂在tableTree
+Vue.component('table-tree', tableTree)
+
 // 这里是入口文件
 Vue.config.productionTip = false
 

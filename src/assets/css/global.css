@@ -1,23 +1,27 @@
-html,body,#app {
+html, body, #app {
     height: 100%;
     padding: 0;
     background-color: #0D3349;
     min-width: 1362px;
 }
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 .box-card {
     text-align: left;
     line-height: 0;
-    box-shadow: 1px 1px 5px rgba(0,0,0,0.2) !important;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2) !important;
 }
+
 .el-breadcrumb {
     margin-bottom: 15px;
     text-align: left;
 }
+
 .el-table {
     margin-bottom: 15px;
 }
@@ -28,4 +32,8 @@ html,body,#app {
 
 .el-tag {
     margin: 10px;
+}
+
+.el-cascader {
+    width: 100%;
 }
