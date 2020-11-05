@@ -24,14 +24,14 @@
                   :is-fold="true"
                   :expand-type="false"
                   :selection-type="false">
-        <!--      是否有效渲染模板-->
+        <!--      是否有效-渲染模板-->
         <template scope="scope" slot="cat_deleted">
           <div>
             <i class="el-icon-success" v-if="scope.row.cat_deleted === true" style="color: #00AA88"></i>
             <i class="el-icon-error" v-else style="color: red"></i>
           </div>
         </template>
-        <!--      排序渲染模板-->
+        <!--      排序-渲染模板-->
         <template scope="scope" slot="cat_level">
           <div>
             <el-tag type="success" v-if="scope.row.cat_level === 0">一级</el-tag>
@@ -39,7 +39,7 @@
             <el-tag type="danger" v-else>三级</el-tag>
           </div>
         </template>
-        <!--      操作渲染模板-->
+        <!--      操作-渲染模板-->
         <template slot="options" slot-scope="scope">
           <div>
             <el-button type="primary" icon="el-icon-edit" @click="editClose(scope.row.cat_id)">编辑</el-button>
@@ -317,5 +317,7 @@
 </script>
 
 <style scoped>
-
+  .el-cascader {
+    width: 100%;
+  }
 </style>

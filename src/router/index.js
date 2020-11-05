@@ -7,6 +7,7 @@ import Users from '../components/users.vue'
 import Roles from '../components/roles.vue'
 import Rights from '../components/rights.vue'
 import Categories from '../components/shop/categories.vue'
+import Params from '../components/shop/params.vue'
 // 这里是路由入口文件
 Vue.use(VueRouter)
 
@@ -39,6 +40,10 @@ const routes = [
       {
         path: '/categories',
         component: Categories
+      },
+      {
+        path: '/params',
+        component: Params
       }
     ]
   }

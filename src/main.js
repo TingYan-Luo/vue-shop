@@ -7,6 +7,8 @@ import tableTree from 'vue-table-with-tree-grid'
 // 引入Element UI
 import './plugins/element.js'
 import 'element-ui/lib/theme-chalk/index.css'
+// 引入lodash
+// import _ from 'vue-cli-plugin-lodash'
 // 引入MessageBOx
 // 导入axios
 import axios from 'axios'
