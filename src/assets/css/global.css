@@ -34,3 +34,19 @@ html, body, #app {
     margin: 10px;
 }
 
+.card-header {
+    width: 100%;
+    margin-bottom: 15px;
+
+}
+.card-header .checkBtn {
+    margin-left: 20px;
+}
+
+.card-header .input-with-select {
+    width: 400px;
+}
+
+.ql-editor {
+    min-height: 300px;
+}

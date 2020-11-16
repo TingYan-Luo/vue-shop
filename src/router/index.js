@@ -8,6 +8,8 @@ import Roles from '../components/roles.vue'
 import Rights from '../components/rights.vue'
 import Categories from '../components/shop/categories.vue'
 import Params from '../components/shop/params.vue'
+import Goods from '../components/shop/goods.vue'
+import AddGoods from '../components/shop/addGoods.vue'
 // 这里是路由入口文件
 Vue.use(VueRouter)
 
@@ -44,6 +46,14 @@ const routes = [
       {
         path: '/params',
         component: Params
+      },
+      {
+        path: '/goods',
+        component: Goods
+      },
+      {
+        path: '/addGoods',
+        component: AddGoods
       }
     ]
   }

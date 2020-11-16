@@ -376,19 +376,6 @@
 
 <style lang="less" scoped>
 
-  .card-header {
-    width: 100%;
-    margin-bottom: 15px;
-
-    .checkBtn {
-      margin-left: 20px;
-    }
-
-    .input-with-select {
-      width: 400px;
-    }
-  }
-
   .text {
     font-size: 14px;
   }
